@@ -1,0 +1,30 @@
+[project]
+name = "llm-filesystem"
+version = "2025.04.1"
+description = "Load LLM templates from the filesystem"
+readme = "README.md"
+authors = [{name = "Jeff Triplett"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+requires-python = ">=3.9"
+dependencies = [
+    "llm>=0.24"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/jefftriplett/llm-filesystem"
+Changelog = "https://github.com/jefftriplett/llm-filesystem/releases"
+Issues = "https://github.com/jefftriplett/llm-filesystem/issues"
+CI = "https://github.com/jefftriplett/llm-filesystem/actions"
+
+[project.entry-points.llm]
+llm_filesystem = "llm_filesystem"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-httpx"]
